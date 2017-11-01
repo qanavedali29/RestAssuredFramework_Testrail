@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11217" started-at="2017-11-01T21:44:38Z" finished-at="2017-11-01T21:44:49Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11217" started-at="2017-11-01T21:44:38Z" finished-at="2017-11-01T21:44:49Z">
+      <class name="com.RestAssured.API.TestRailAPI">
+        <test-method status="PASS" signature="setURL()[pri:0, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="setURL" is-config="true" duration-ms="14" started-at="2017-11-02T03:14:38Z" finished-at="2017-11-02T03:14:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setURL -->
+        <test-method status="PASS" signature="loginInToApplication()[pri:0, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="loginInToApplication" is-config="true" duration-ms="744" started-at="2017-11-02T03:14:38Z" finished-at="2017-11-02T03:14:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInToApplication -->
+        <test-method status="PASS" signature="addProject()[pri:1, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="addProject" duration-ms="3301" started-at="2017-11-02T03:14:38Z" finished-at="2017-11-02T03:14:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProject -->
+        <test-method status="PASS" signature="loginInToApplication()[pri:0, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="loginInToApplication" is-config="true" duration-ms="6" started-at="2017-11-02T03:14:42Z" finished-at="2017-11-02T03:14:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInToApplication -->
+        <test-method status="PASS" signature="getAllProject()[pri:2, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="getAllProject" duration-ms="2432" started-at="2017-11-02T03:14:42Z" finished-at="2017-11-02T03:14:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllProject -->
+        <test-method status="PASS" signature="loginInToApplication()[pri:0, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="loginInToApplication" is-config="true" duration-ms="2" started-at="2017-11-02T03:14:44Z" finished-at="2017-11-02T03:14:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInToApplication -->
+        <test-method status="PASS" signature="addSuite()[pri:3, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="addSuite" duration-ms="1635" started-at="2017-11-02T03:14:44Z" finished-at="2017-11-02T03:14:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSuite -->
+        <test-method status="PASS" signature="loginInToApplication()[pri:0, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="loginInToApplication" is-config="true" duration-ms="1" started-at="2017-11-02T03:14:46Z" finished-at="2017-11-02T03:14:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInToApplication -->
+        <test-method status="PASS" signature="deleteProject()[pri:4, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="deleteProject" duration-ms="1514" started-at="2017-11-02T03:14:46Z" finished-at="2017-11-02T03:14:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteProject -->
+        <test-method status="PASS" signature="loginInToApplication()[pri:0, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="loginInToApplication" is-config="true" duration-ms="4" started-at="2017-11-02T03:14:47Z" finished-at="2017-11-02T03:14:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInToApplication -->
+        <test-method status="PASS" signature="getUnknownProject()[pri:5, instance:com.RestAssured.API.TestRailAPI@4678c730]" name="getUnknownProject" duration-ms="1517" started-at="2017-11-02T03:14:47Z" finished-at="2017-11-02T03:14:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUnknownProject -->
+      </class> <!-- com.RestAssured.API.TestRailAPI -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
