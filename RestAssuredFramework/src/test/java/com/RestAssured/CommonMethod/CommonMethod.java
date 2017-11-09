@@ -29,16 +29,8 @@ public class CommonMethod extends CommonMethodParent
 		return response.getBody().asString();
 	}
 	
-	public void verifyBodyContains(Response response, String text) throws Exception
+	public void verifyBodyContains(Response response, String text)
 	{
-		try
-		{
 		Assert.assertTrue(isTextPresentInBody(response,text));
-		}
-		catch(Exception e)
-		{
-			System.out.println("BODY : "+response.getBody().asString() +" does not contains "+text);
-			throw e;
-		}
 	}
 }

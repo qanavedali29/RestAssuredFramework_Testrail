@@ -19,10 +19,10 @@ public class TestRailAPI extends TestRailUrlInitialization
 		commonMethod = new CommonMethod();
 	}
 	
+	//Add project to testrail
 	@Test(priority=1)
 	public void addProject()
 	{
-
 		Response response = loginInToApplication().
 				body("{\r\n" + 
 						"	\"name\": \"This is a new project\",\r\n" + 
@@ -35,10 +35,10 @@ public class TestRailAPI extends TestRailUrlInitialization
 		Assert.assertEquals(response.getStatusCode(), 200);
 	}
 	
+	//Get all project from testrail
 	@Test(priority=2)
 	public void getAllProject()
 	{
-
 		Response response = loginInToApplication().
 				when().
 				contentType(ContentType.JSON).
@@ -46,8 +46,39 @@ public class TestRailAPI extends TestRailUrlInitialization
 		Assert.assertEquals(response.getStatusCode(), 200);
 		project_id = response.then().extract().path("[0].id");
 	}
-	
+
+	//Get single project from testRail
 	@Test(priority=3)
+	public void getSingleProject()
+	{
+
+		Response response = loginInToApplication().
+				when().
+				contentType(ContentType.JSON).
+				get(baseUrl+"/index.php?/api/v2/get_project/"+project_id);
+		System.out.println(response.asString());
+	}
+	
+	//Update the project
+	@Test(priority=4)
+	public void updateProject()
+	{
+		Response response = loginInToApplication().
+				body("{\r\n" + 
+						"	\"name\": \"This is a Updated project\",\r\n" + 
+						"	\"announcement\": \"This is the updated description for the project\",\r\n" + 
+						"	\"show_announcement\": true,\r\n" + 
+						"	\"is_completed\" : true\r\n"+
+						"}").
+				when().
+				contentType(ContentType.JSON).
+				post(baseUrl+"/index.php?/api/v2/update_project/"+project_id);
+			Assert.assertEquals(response.getStatusCode(), 200);
+			Assert.assertFalse(response.asString().contains("This is a new project"));
+	}
+
+	//Add suite to project
+	@Test(priority=5)
 	public void addSuite()
 	{
 
@@ -58,13 +89,14 @@ public class TestRailAPI extends TestRailUrlInitialization
 						"}").
 				when().
 				contentType(ContentType.JSON).
-				post(baseUrl+"/index.php?/api/v2/add_suite/"+project_id);
+				post(baseUrl+"/index.php?/api/v2/add_suite/13");//+project_id);
 		Assert.assertEquals(response.getStatusCode(), 200);
 		suite_id = response.then().extract().path("id");
 				System.out.println("suite_id : "+suite_id);
 	}
 	
-	@Test(priority=4)
+	//Delete project
+	@Test(priority=6)
 	public void deleteProject()
 	{
 
@@ -75,7 +107,8 @@ public class TestRailAPI extends TestRailUrlInitialization
 		Assert.assertEquals(response.getStatusCode(), 200);
 	}
 	
-	@Test(priority=5)
+	//Try to get details of deleted project
+	@Test(priority=7)
 	public void getUnknownProject() throws Exception
 	{
 
